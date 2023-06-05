@@ -40,7 +40,12 @@ const scoreBoard = document.querySelector(`.score`);
 const play = document.querySelector(`#play`);
 const playAgain = document.querySelector(`#playAgain`);
 let childCount;
-let keys;
+const head = document.querySelector(`.head`);
+const body = document.querySelector(`.body`);
+const rightArm = document.querySelector(`.right-arm`);
+const leftArm = document.querySelector(`.left-arm`);
+const rightLeg = document.querySelector(`.right-leg`);
+const leftLeg = document.querySelector(`.left-leg`);
 
 window.onload = function() {
     startGameModule.classList.add(`youLose`);
@@ -123,7 +128,15 @@ function checkLetter(value) {
     if(!guessedLetters.includes(value)) {
         lives--;
         livesLeft.innerText = lives;
-        // console.log(`your lives:`, lives)
+        if(lives === 7) head.classList.add(`show`);
+        if(lives === 6)  body.classList.add(`show`);
+        if(lives === 5)  rightArm.classList.add(`show`);
+        if(lives === 4)  leftArm.classList.add(`show`);
+        if(lives === 3)  rightArm.classList.add(`show`);
+        if(lives === 2)  rightLeg.classList.add(`show`);
+        if(lives === 1)  leftLeg.classList.add(`show`);
+            
+        
 
         if(lives === 0) {
             gameOverSound.play();
@@ -137,6 +150,12 @@ function checkLetter(value) {
                 guessedLetters = [];
                 gameOver.classList.remove(`youLose`);
                 livesLeft.innerText = lives;
+                head.classList.remove(`show`)
+                body.classList.remove(`show`)
+                rightArm.classList.remove(`show`)
+                leftArm.classList.remove(`show`)
+                rightLeg.classList.remove(`show`)
+                leftLeg.classList.remove(`show`)
 
                 setTimeout(() => {
                     letters.forEach((letter)=>{

@@ -31,7 +31,57 @@ body{
 }
 
 #hang-stand{
-    width: 50%;
+    width: 100%;
+   
+}
+.head{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 100px;
+    visibility: hidden;
+}
+.body{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 100px;
+    visibility: hidden;
+}
+.right-arm{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 100px;
+    visibility: hidden;
+}
+.left-arm{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 100px;
+    visibility: hidden;
+}
+.right-leg{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 100px;
+    visibility: hidden;
+}
+.left-leg{
+    position: absolute;
+    top: 120px;
+    left: 160px;
+    width: 100px;
+    visibility: hidden;
+}
+.show{
+    visibility: visible;
+}
+.standBox{
+    width:50%;
+    position: relative;
 }
 .hangman{
     display: flex;
