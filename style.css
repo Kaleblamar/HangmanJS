@@ -165,6 +165,7 @@ input[type="button"]:active{
     position: relative;
     border-radius: 10px;
     box-shadow: 0 0 10px black;
+    padding: 15px;
 }
 #exe{
     position: absolute;
@@ -205,12 +206,12 @@ h1{
 }
 
 #play{
-    position: absolute;
+    /* position: absolute; */
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    right: 10px;
-    top: 10px;
+    /* right: 10px; */
+    /* top: 10px; */
 
 }
 
@@ -228,4 +229,25 @@ h2{
 .lives{
     color: red;
     text-shadow: 0 0 5px black;
+}
+
+.startGame{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+    backdrop-filter: blur(10px);
+    transition: 1.2s linear;
+}
+.startGame h1{
+    color: green;
+}
+.startGame.youLose{
+    display: flex;
 }

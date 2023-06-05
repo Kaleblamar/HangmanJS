@@ -26,8 +26,9 @@ const wordBank = [
     "yak",
     "zebra"
   ];
-  const livesLeft = document.querySelector(`.lives`);
-  const playAgainSound = new Audio(`./Audio/mixkit-arcade-bonus-229.wav`);
+const startGameModule = document.querySelector(`.startGame`);
+const livesLeft = document.querySelector(`.lives`);
+const playAgainSound = new Audio(`./Audio/mixkit-arcade-bonus-229.wav`);
 const gameOverSound = new Audio(`./Audio/mixkit-fairytale-game-over-1945.wav`);
 const gameOver = document.querySelector(`.gameOver`);
 const click = new Audio(`./Audio/mixkit-single-key-type-2533.wav`);
@@ -41,11 +42,17 @@ const playAgain = document.querySelector(`#playAgain`);
 let childCount;
 let keys;
 
+window.onload = function() {
+    startGameModule.classList.add(`youLose`);
+    
+    console.log(startGameModule)
+};
 
 
 play.addEventListener(`click`, startGame);
   function startGame(){
-
+    playAgainSound.play();
+    startGameModule.classList.remove(`youLose`);
   generateRandomWord();
   }
 
