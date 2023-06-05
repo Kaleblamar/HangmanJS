@@ -40,6 +40,7 @@ body{
     top: 175px;
     left: 80px;
     z-index: -1;
+    filter: drop-shadow(0 0 8px black);
 }
 .head{
     position: absolute;
@@ -111,7 +112,7 @@ body{
 
 .randomWord{
     display: flex;
-    gap: 10px;
+    gap: 5px;
    
     
     
