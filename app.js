@@ -24,7 +24,9 @@ const wordBank = [
     "watermelon",
     "xylophone",
     "yak",
-    "zebra"
+    "zebra",
+    
+    
   ];
 const startGameModule = document.querySelector(`.startGame`);
 const livesLeft = document.querySelector(`.lives`);
@@ -85,7 +87,7 @@ const letters = document.querySelectorAll(`input[type="button"]`);
      letter.addEventListener(`click`, ()=>{
     click.play();
       checkLetter(letter.value);
-      letter.style.opacity = `0`;
+      letter.style.visibility = `hidden`;
     //   console.log(letter.value);
      })
   })
@@ -114,7 +116,7 @@ function checkLetter(value) {
             }, 1200);
             setTimeout(() => {
                 letters.forEach((letter)=>{
-                    letter.style.opacity = `1`;
+                    letter.style.visibility = `visible`;
                 })
                 
             }, 500);
@@ -159,7 +161,7 @@ function checkLetter(value) {
 
                 setTimeout(() => {
                     letters.forEach((letter)=>{
-                        letter.style.opacity = `1`;
+                        letter.style.visibility = `visible`;
                     })
                     
                 }, 500);
