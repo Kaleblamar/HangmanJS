@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hangman game">
+    <meta name="author" content="James Kaleb Lamar">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./app.js"></script>
+    <title>Hangman</title>
+</head>
+<body>
+
+    <div class="gameOver">
+        <div class="gameOverInner">
+            <h1>Game Over!</h1>
+            <img id="exe" src="./Sprites/Executioner icon.png" alt="">
+
+            <button id="playAgain" class="play">Play Again</button>
+        </div>
+    </div>
+    <!-- <audio src="./Audio/mixkit-single-key-type-2533.wav" preload="auto"></audio> -->
+    <div class="hangman">
+        
+        <div class="scoreBox">
+            <h1 class="score">0</h1>
+            <h2> Lives: <span class="lives">8</span></h2>
+        </div>
+   
+        <div class="testBox">
+        <img id="backg" src="https://img.freepik.com/free-vector/cartoon-nature-landscape-summer-sunny-forest_107791-13785.jpg?w=2000&t=st=1685866155~exp=1685866755~hmac=ddb51046e52e47d483bd82d78434aa71145b70102c74495c76dc43417b6fe140" alt="">
+        <img id="hang-stand" src="./Sprites/HangmanStand.png" alt="">
+        <div class="randomWord">
+            <!-- <img id="farmer" src="" alt=""> -->
+          </div>
+        </div>
+    </div>
+
+    <div class="inputContainer">
+        <div class="row">
+        <input type="button" value="a">
+        <input type="button" value="b">
+        <input type="button" value="c">
+        <input type="button" value="d">
+        <input type="button" value="e">
+        <input type="button" value="f">
+        <input type="button" value="g">
+        <input type="button" value="h">
+    </div>
+    <div class="row">
+        <input type="button" value="i">
+        <input type="button" value="j">
+        <input type="button" value="k">
+        <input type="button" value="l">
+        <input type="button" value="m">
+        <input type="button" value="n">
+        <input type="button" value="o">
+        <input type="button" value="p">
+        <input type="button" value="q">
+        <input type="button" value="r">
+    </div>
+    <div class="row">
+        <input type="button" value="s">
+        <input type="button" value="t">
+        <input type="button" value="u">
+        <input type="button" value="v">
+        <input type="button" value="w">
+        <input type="button" value="x">
+        <input type="button" value="y">
+        <input type="button" value="z">
+    </div>
+    <button id="play" class="play">Play</button>
+    </div>
+
+    
+</body>
+</html>
