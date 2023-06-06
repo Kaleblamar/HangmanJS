@@ -233,13 +233,14 @@ input[type="button"]:active{
     /* transform: translate(-50%, -50%); */
     /* z-index: -1; */
     object-fit: fill;
-    filter: drop-shadow(0 0 10px red);
+    filter: drop-shadow(0 0 10px black);
 }
 h1{
     text-align: center;
     color: red;
     font-family: var(--font-family);
     z-index: 1;
+    text-shadow: 0 0 5px black;
 }
 .play{
     width: 60%;

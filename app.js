@@ -174,4 +174,3 @@ function checkLetter(value) {
   };
 
  
-//   console.log(childCount)
