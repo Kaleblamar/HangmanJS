@@ -303,10 +303,22 @@ h2{
     z-index: 999;
     backdrop-filter: blur(10px);
     transition: 1.2s linear;
+
 }
 .startGame h1{
-    color: green;
+    color: rgb(255, 97, 5);
+    text-shadow: 0 0 12px black;
+    transform: translateZ(100px);
 }
 .startGame.youLose{
     display: flex;
+}
+
+.startInner{
+    background-image: url(./Sprites/CartoonKnight.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: space-between;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }

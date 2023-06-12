@@ -28,6 +28,9 @@ const wordBank = [
     
     
   ];
+
+  // const testB = ["ice cream"]
+  
 const startGameModule = document.querySelector(`.startGame`);
 const livesLeft = document.querySelector(`.lives`);
 const playAgainSound = new Audio(`./Audio/mixkit-arcade-bonus-229.wav`);
@@ -74,9 +77,13 @@ play.addEventListener(`click`, startGame);
         box.appendChild(span);
         span.textContent = char; 
         span.style.opacity = `0`;
+        if(char === ` `){
+         box.style.visibility = `hidden`;
+         guessedLetters.push(` `);
         
-        // if(char === ``) box.style.backgroundColor = `black`;
+        }
     };
+    
     childCount = container.childElementCount;
 
     
@@ -106,13 +113,18 @@ function checkLetter(value) {
             score++;
             lives++;
             scoreBoard.innerText = score;
-            container.innerHTML = ``
+            
             guessedLetters = [];
             container.classList.add(`foundWord`)
-            correct.play();
-            generateRandomWord();
+              correct.play();
             setTimeout(() => {
-                container.classList.remove(`foundWord`)
+              
+              generateRandomWord();
+            }, 1400);
+           
+            setTimeout(() => {
+              container.innerHTML = ``
+              container.classList.remove(`foundWord`)
             }, 1200);
             setTimeout(() => {
                 letters.forEach((letter)=>{
